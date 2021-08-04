@@ -1,50 +1,65 @@
-body{
-    font-family:'Calibri Light','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body {
+  font-family: "Calibri Light", "Trebuchet MS", "Lucida Sans Unicode",
+    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-header{
-    background-image:url(./img/header22.jpg);
-    color: aliceblue;
+header {
+  background-image: url(./img/header22.jpg);
+  color: aliceblue;
 }
 
-#profilPicture{
-    border-color: black;
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 1em;
-    position: relative;
-    left: -2px;
-    top: -15px;
-
+#profilPicture {
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 1em;
+  position: relative;
+  left: -2px;
+  top: -15px;
 }
 
-#personal-infos{
-    text-align: center;
+#personal-infos {
+  text-align: center;
 }
 
-
-#formations-section{
-    background-color: rgba(2, 17, 17, 0.425);  
-    margin-top: 3em;
+#formations-section {
+  background-color: rgba(2, 17, 17, 0.425);
+  margin-top: 3em;
 }
 
-#formation-actuelle{
-    font-weight: bold;
+.section-title {
+  font-family: "Arial Narrow", Arial, sans-serif;
 }
 
-.study-year{
-    font-weight: bold;
-    color: rgb(38,0,128);
+/** The same list but using à table to get a distanciation*/
+#trainings-table {
+  border-spacing: 1em 0px;
+  margin-left: 0.5em;
 }
 
-footer{
-    background-image:url(./img/header22.jpg);
-    height: 12em;
-    color: aliceblue;
+#trainings-table tr td {
+  padding: 0px;
+  border-collapse: separate;
 }
-footer p{
-    position: relative;
-    font-style:italic;
-    left: 42em;
-    top: 100px;
+
+.formation-actuelle {
+  font-weight: bold;
+  color: #182929;
+}
+
+.study-year {
+  font-weight: bold;
+  color: rgb(38, 0, 128);
+}
+
+footer {
+  background-image: url(./img/header22.jpg);
+  height: 12em;
+  color: aliceblue;
+}
+footer p {
+  position: relative;
+  font-style: italic;
+  left: 42em;
+  top: 100px;
 }
