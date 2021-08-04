@@ -1,0 +1,50 @@
+body{
+    font-family:'Calibri Light','Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header{
+    background-image:url(./img/header22.jpg);
+    color: aliceblue;
+}
+
+#profilPicture{
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 1em;
+    position: relative;
+    left: -2px;
+    top: -15px;
+
+}
+
+#personal-infos{
+    text-align: center;
+}
+
+
+#formations-section{
+    background-color: rgba(2, 17, 17, 0.425);  
+    margin-top: 3em;
+}
+
+#formation-actuelle{
+    font-weight: bold;
+}
+
+.study-year{
+    font-weight: bold;
+    color: rgb(38,0,128);
+}
+
+footer{
+    background-image:url(./img/header22.jpg);
+    height: 12em;
+    color: aliceblue;
+}
+footer p{
+    position: relative;
+    font-style:italic;
+    left: 42em;
+    top: 100px;
+}
