@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>webCV</title>
     <link rel="stylesheet" href="styleCV.css" />
   </head>
   <body>
@@ -41,6 +41,8 @@
       </h4>
 
       <div id="personal-infos">
+
+        <!--TODO ajouter les icons-->
         <p style="display: inline; margin: 0em 2em; font-weight: bold">
           Adresse:&nbsp;37200&nbsp;Tours
         </p>
@@ -65,7 +67,7 @@
         <tr>
           <td>&bull;&nbsp;&nbsp;<span class="study-year">En cours</span></td>
           <td class="formation-actuelle">
-            Master compétence complémentaire en informatique
+            Master Compétence Complémentaire en Informatique
           </td>
         </tr>
         <tr>
@@ -89,6 +91,7 @@
         </tr>
       </table>
 
+      <!--
       <ul>
         <li class="formation-actuelle">
           <span class="study-year">En cours</span> Master Compétence
@@ -111,19 +114,21 @@
           Mathématiques
         </li>
       </ul>
+      -->
     </section>
 
-    <section style="background-color: rgba(198, 201, 200, 0.205)">
-      <!--  
-    <h2 style="font-weight: bold; ">PROJETS ACADEMIQUES</h2>
+    <section id="academic-projects-section">
+     
+    <h2 class="section-title">PROJETS ACADEMIQUES</h2>
+
     <ul id="projects-list">    
-      <li class="project-name" style="font-weight:bold;">Réalisation d'un CV dynamique
+      <li><h3 class="project-name">Réalisation d'un CV dynamique</h3> 
         <ul>
           <li class="project-info"><h4>Description du projet</h4></li>
-          <p>La création d'un CV en HTML et CSS était l'idée de depart de ce CV, Avec l'augmentation de nombres de projets et problématiques que j'ai décédé de traité, j'ai réflichi donc à créer un CV dynamique pour stocker le contenu du CV et pour le faire évolué d'une manière plus rapide</p> 
+          <p>La création d'un CV en HTML et CSS était l'idée de depart de ce CV, avec l'augmentation de nombres de projets et problématiques que j'ai décidé de traiter, j'ai réflichi donc à créer un CV dynamique pour stocker le contenu du CV et pour une évolution beacoups plus rapide et dynamique</p> 
 
-           <li class="project-info"><h4>La logique utilisé</h4></li>
-           <p>Je suis parti sur une maquette de départ en HTMl et CSS. J'ai réalisé donc un site statique(Modification se fait manullement à travers le code source de la page). J'ai apporté des premieres ameliorations en repérant les parties redandantes du code et je les ai donc factorisé notamment le style appliqué aux élements HTML. Une fois la base a été construite. J'ai pensé à faire évolué le code en utilisant du PHP et une Base de donnée SQL.  <br/>
+           <li class="project-info"><h4>Logique utilisé</h4></li>
+           <p>Je suis parti sur une maquette de départ en HTML et CSS. J'ai réalisé donc un site statique (Modification se fait manuellement à travers le code source de la page). J'ai apporté des premieres ameliorations en repérant les parties redandantes du code et je les ai donc factorisé notamment celle conçernant le style appliqué aux élements HTML. Une fois la base a été construite. J'ai pensé à faire évolué le code en utilisant du PHP et une Base de donnée SQL.  <br/>
             Le contenu de la page pouvait donc s'évolué à travers les données saisi par un utilisateur d'un formulaire et que sont stocké dans la base de donnée SQL.
            </p> 
            <li class="project-info" ><h4>Taches effectuées</h4></li>
@@ -133,11 +138,10 @@
         </ul>
       </li>
 
-
-      <li class="project-name" style="font-weight:bold;">Réalisation d'un site web pour la GMAO d'un parc machine
+      <li> <h3 class="project-name" >Réalisation d'un site web pour la GMAO d'un parc machine</h3>
         <ul>
           <li class="project-info"><h4>Description du projet</h4></li>
-          <p>L'augmentation du nombre de machines dans un parc machine a complexifié sa gestion. J'ai essayé de reproduire dans le cas de ce projet un prototype d'application web <br/>
+          <p>L'augmentation du nombre de machines dans un parc machine a complexifié sa gestion. J'ai essayé de reproduire dans le cas de ce projet un prototype d'application web 
           qui peut etre utilisé pour gérer un parc machine. Le context supposé dans ce projet concerne des machines industriels. Le meme raisonnement peut etre considéré sur un parc informatique, ce qu'on appele aujouurd'hui un HelpDesk.
         <br>La solution apporté peut evisagé la connexion à un systeme d'IoT dans lequelle les données aqcuis par le systeme sont capturé à travers différentes terminaux notamments des capteurs, ou des données saisi par un operateurs dans une tablette</p> 
 
@@ -146,7 +150,7 @@
 <ol>
   <li>Réalisation d'une maquette en HTML et CSS de toute les page du site avec des éléments statiques.</li>
   <li>Utilisation des noms de class pour factoriser le style CSS dans une feuille de style</li>
-  <li>Création </li>
+  <li>Création</li>
 </ol>
            </p> 
            <li class="project-info" ><h4>Taches effectuées</h4></li>
@@ -157,38 +161,62 @@
       </li>
     </ul>
 
-    --></section>
+    </section>
 
-    <section>
+    <section id="professional-experiences-section">
       <h2 class="section-title">EXPERIENCE PROFESSIONELLE</h2>
-      <ul class="professional-experiences-list">
-        <li>02/2020 à 10/2020 : SCOMA, La Loupe, Chartres, France</li>
-        <li>
-          05/2019 à 06/2019 : SONATRACH/DP Hassi R’Mel-Station du gaz-Unité
-          Boosting, Algérie.
-        </li>
-        <li>
-          03/2017 à 04/2017 : Société Nouvelle de Carreaux Céramique de Remchi,
-          CERAMIR, Spa, Algérie.
-        </li>
-      </ul>
+      <table id="trainings-table">
+        <tr>
+          <td>&bull;&nbsp;&nbsp;<span class="study-year">02/2020 à 10/2020</span></td>
+          <td>
+            SCOMA, La Loupe, Chartres, France
+          </td>
+        </tr>
+        <tr>
+          <td>&bull;&nbsp;&nbsp;<span class="study-year">05/2019 à 06/2019</span></td>
+          <td>SONATRACH/DP Hassi R’Mel-Station du gaz-Unité Boosting, Algérie.</td>
+        </tr>
+        <tr>
+          <td>&bull;&nbsp;&nbsp;<span class="study-year">03/2017 à 04/2017</span></td>
+          <td>Société Nouvelle de Carreaux Céramique de Remchi,CERAMIR, Spa, Algérie.</td>
+        </tr>
+      </table>
     </section>
 
-    <section>
+    <section id="competences-techniques-section">
       <h2 class="section-title">COMPETENCES TECHNIQUES</h2>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
+      <table id="trainings-table">
+        <tr>
+          <td>&bull;&nbsp;&nbsp;<span class="study-year">Automatique</span></td>
+          <td>
+            Automatisme et régulation industrielle, sureté de fonctionnement, étude de faisabilité, gestion de projets, coneption de cellules robotisées, modélisation et conception des commandes.
+          </td>
+        </tr>
+        <tr>
+          <td>&bull;&nbsp;&nbsp;<span class="study-year">Développement web</span></td>
+          <td>HTML, CSS, JS, React, Vue.JS, Angular, JAVA EE, SQL, PHP</td>
+        </tr>
+        <tr>
+          <td>&bull;&nbsp;&nbsp;<span class="study-year">Développement logiciel</span></td>
+          <td>JAVA,SQL</td>
+        </tr>
+        <tr>
+          <td>&bull;&nbsp;&nbsp;<span class="study-year">Logiciels</span></td>
+          <td>TIA Portal, Unity Pro, Roboguide, SRS Staubli, MS office, Latex, SolidWorks</td>
+        </tr>
+        <tr>
+          <td>&bull;&nbsp;&nbsp;<span class="study-year">OS</span></td>
+          <td>Windows, Linux</td>
+        </tr>
+      </table>
     </section>
 
-    <section>
-      <h2>LOISIRS</h2>
+    <section id="loisirs-section">
+      <h2 class="section-title">LOISIRS</h2>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>Sport</li>
+        <li>Voyage</li>
+        <li>Tutorials</li>
       </ul>
     </section>
 

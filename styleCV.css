@@ -1,11 +1,14 @@
-body {
+* {
   font-family: "Calibri Light", "Trebuchet MS", "Lucida Sans Unicode",
     "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
-
+/*
+---------------------------------------------------------------------------
+*/
 header {
   background-image: url(./img/header22.jpg);
   color: aliceblue;
+  border-radius: 5px;
 }
 
 #profilPicture {
@@ -23,8 +26,9 @@ header {
 }
 
 #formations-section {
-  background-color: rgba(2, 17, 17, 0.425);
+  background-color: rgba(2, 17, 17, 0.342);
   margin-top: 3em;
+  border-radius: 5px;
 }
 
 .section-title {
@@ -51,11 +55,46 @@ header {
   font-weight: bold;
   color: rgb(38, 0, 128);
 }
+/*----------------------------FORMATIONS ACADEMIQUES---------------------------*/
+#academic-projects-section {
+  /*TODO Transferer la partie en tableau*/
+  /*TODO Bien postiionné les différents sections*/
+  background-color: rgba(66, 110, 110, 0.418);
+  border-radius: 5px;
+}
+
+.project-name {
+  font-weight: bold;
+  color: rgb(38, 0, 128);
+}
+
+.project-info {
+  color: rgba(38, 0, 128, 0.678);
+}
+
+/*-------------------------EXPERIENCES PROFESSIONNELLES------------------*/
+#professional-experiences-section {
+  background-color: rgba(2, 17, 17, 0.342);
+  border-radius: 5px;
+}
+
+/*-------------------------COMPETENCES TECHNIQUES------------------------*/
+
+#competences-techniques-section {
+  background-color: rgba(66, 110, 110, 0.418);
+  border-radius: 5px;
+}
+
+#loisirs-section {
+  background-color: rgba(2, 17, 17, 0.342);
+  border-radius: 5px;
+}
 
 footer {
   background-image: url(./img/header22.jpg);
   height: 12em;
   color: aliceblue;
+  border-radius: 5px;
 }
 footer p {
   position: relative;
