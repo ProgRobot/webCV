@@ -90,6 +90,23 @@ header {
   border-radius: 5px;
 }
 
+/*------------Boutton d'ajout d'un projet-------------*/
+a {
+  text-decoration: none;
+  background-color: rgb(127, 255, 244);
+  color: black;
+  border-radius: 5px;
+  padding: 0.5em;
+  position: relative;
+  left: 42em;
+}
+
+a:hover {
+  background-color: #75a7a7;
+}
+
+/*------------------------*/
+
 footer {
   background-image: url(./img/header22.jpg);
   height: 12em;

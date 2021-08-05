@@ -120,7 +120,7 @@
     <section id="academic-projects-section">
      
     <h2 class="section-title">PROJETS ACADEMIQUES</h2>
-
+    //TODO l'affichage à partir d'une base de donnée
     <ul id="projects-list">    
       <li><h3 class="project-name">Réalisation d'un CV dynamique</h3> 
         <ul>
@@ -160,6 +160,8 @@
         </ul>
       </li>
     </ul>
+
+    <a href="cvForm.html">Ajouter un projet <b>+</b> </a>
 
     </section>
 
