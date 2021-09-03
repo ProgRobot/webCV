@@ -161,7 +161,7 @@
       </li>
     </ul>
 
-    <a href="cvForm.html">Ajouter un projet <b>+</b> </a>
+    <a href="cvForm.php"><b>Ajouter un projet +</b></a>
 
     </section>
 
