@@ -9,11 +9,6 @@
   </head>
   <body>
 
-  <?php
-      //TODO Création du formulaire et de la base de donnée 
-   ?>
-    
-
     <form action="cvForm.php" method="post">
       <fieldset>
       <legend><b>INFORMATIONS A PROPOS DU PROJET</b></legend>
@@ -27,6 +22,9 @@
       <textarea name="projectDescriptionField" id="projectDescription" placeholder="Exemple: Ce projet consiste à la réalisation d'un drone quadrirotor, le but est de réussir à stabiliser le drone dans une altitude dans des conditions climatiques normal..." cols="133" rows="10" required></textarea><br><br>
       <label for="usedLogicField"><b>Logique utilisée:</b></label><br>
       <textarea name="projectLogic" id="usedLogicField" placeholder="Exemple: J'ai commencé à réaliser le modele mathématique du drone sous Matlab Simulink, j'ai simulé en ajustant les paramètres du système et de la commande pour garantir les spécifications du cahier des charges...etc " cols="133" rows="10" required></textarea><br><br>
+      <?php 
+      //TODO add "Taches effectuées" + Add the attribute in the database
+      ?>
       <label for="projectSkillsField"><b>Compétences acquises:</b></label><br>
       <input id="projectSkillsField" name="projectSkills" type="text" size="148" placeholder="Exemple: Solidworks, Matlab/Simulink, Modelisation ... etc " required><br><br>
       <a href="index.php">Revenir au CV</a>
@@ -36,16 +34,14 @@
       
     if (isset($_POST['projectTitle']) && isset($_POST['DateDebut']) && isset($_POST['DateFin'])&&isset($_POST['projectDescriptionField'])&&isset($_POST['projectLogic'])&&isset($_POST['projectSkills'])&&isset($_POST['btnAjouter'])) {
 
-    
-
-       try 
-       {
-            //Connection to the database
-            $bdd = new PDO('mysql:host=localhost;dbname=cvwebdb;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
-        } catch (Exception $e) {
-            // In the event of an error, a message is displayed and everything is stopped
-            die('Erreur' . $e->getMessage());
-        }
+         try 
+          {
+          //Connection to the database
+          $bdd = new PDO('mysql:host=localhost;dbname=cvwebdb;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+          } catch (Exception $e) {
+          // In the event of an error, a message is displayed and everything is stopped
+          die('Erreur' . $e->getMessage());
+          }
 
         //Insertion
         $req = $bdd->prepare('INSERT INTO cvwebdb.projet(intitule, date_debut, date_fin,description,logique_utilise,competences_acquises) VALUES(:intitule, :date_debut, :date_fin,:description,:logique_utilise,:competences_acquises)');

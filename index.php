@@ -120,46 +120,52 @@
     <section id="academic-projects-section">
      
     <h2 class="section-title">PROJETS ACADEMIQUES</h2>
-    //TODO l'affichage à partir d'une base de donnée
-    <ul id="projects-list">    
-      <li><h3 class="project-name">Réalisation d'un CV dynamique</h3> 
+    
+    <!--//TODO l'affichage à partir d'une base de donnée-->
+
+    <ul id="projects-list">
+    <?php
+
+        try 
+        {
+        //Connection to the database
+        $bdd = new PDO('mysql:host=localhost;dbname=cvwebdb;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+        } catch (Exception $e) {
+        // In the event of an error, a message is displayed and everything is stopped
+        die('Erreur' . $e->getMessage());
+        }
+
+        //Data extraction
+        $req = $bdd->prepare('SELECT intitule, date_debut, date_fin,description,logique_utilise,competences_acquises FROM cvwebdb.projet');
+        $req->execute();
+
+        while ($donnees = $req->fetch()) {
+
+
+    ?>
+
+      <li><h3 class="project-name"><?php echo $donnees['intitule'];?></h3> 
         <ul>
           <li class="project-info"><h4>Description du projet</h4></li>
-          <p>La création d'un CV en HTML et CSS était l'idée de depart de ce CV, avec l'augmentation de nombres de projets et problématiques que j'ai décidé de traiter, j'ai réflichi donc à créer un CV dynamique pour stocker le contenu du CV et pour une évolution beacoups plus rapide et dynamique</p> 
-
+          <p><?php echo $donnees['description'];?></p> 
            <li class="project-info"><h4>Logique utilisé</h4></li>
-           <p>Je suis parti sur une maquette de départ en HTML et CSS. J'ai réalisé donc un site statique (Modification se fait manuellement à travers le code source de la page). J'ai apporté des premieres ameliorations en repérant les parties redandantes du code et je les ai donc factorisé notamment celle conçernant le style appliqué aux élements HTML. Une fois la base a été construite. J'ai pensé à faire évolué le code en utilisant du PHP et une Base de donnée SQL.  <br/>
-            Le contenu de la page pouvait donc s'évolué à travers les données saisi par un utilisateur d'un formulaire et que sont stocké dans la base de donnée SQL.
-           </p> 
+           <p><?php echo $donnees['logique_utilise'];?></p> 
+
+           <!--
            <li class="project-info" ><h4>Taches effectuées</h4></li>
-          <p>L'augmentation du nombre de machines dans un parc machine a complexifié sa gestion et la detection des anomalie de fonctionnement</p>
-            <li class="project-info" ><h4>Compétences aqcuises</h4></li>
-          <p>HTML, CSS, PHP,SQL</p>
+          <p>L'augmentation du nombre de machines dans un parc machine a complexifié sa gestion et la detection des anomalie de fonctionnement</p> -->
+            <li class="project-info" ><h4>Compétences acquises</h4></li>
+          <p><?php echo $donnees['competences_acquises'];?></p>
         </ul>
       </li>
+    <?php 
 
-      <li> <h3 class="project-name" >Réalisation d'un site web pour la GMAO d'un parc machine</h3>
-        <ul>
-          <li class="project-info"><h4>Description du projet</h4></li>
-          <p>L'augmentation du nombre de machines dans un parc machine a complexifié sa gestion. J'ai essayé de reproduire dans le cas de ce projet un prototype d'application web 
-          qui peut etre utilisé pour gérer un parc machine. Le context supposé dans ce projet concerne des machines industriels. Le meme raisonnement peut etre considéré sur un parc informatique, ce qu'on appele aujouurd'hui un HelpDesk.
-        <br>La solution apporté peut evisagé la connexion à un systeme d'IoT dans lequelle les données aqcuis par le systeme sont capturé à travers différentes terminaux notamments des capteurs, ou des données saisi par un operateurs dans une tablette</p> 
+      }
+    
+    $req->closeCursor();
+    
+    ?>
 
-           <li class="project-info"><h4>La logique utilisé</h4></li>
-           <p>
-<ol>
-  <li>Réalisation d'une maquette en HTML et CSS de toute les page du site avec des éléments statiques.</li>
-  <li>Utilisation des noms de class pour factoriser le style CSS dans une feuille de style</li>
-  <li>Création</li>
-</ol>
-           </p> 
-           <li class="project-info" ><h4>Taches effectuées</h4></li>
-          <p>L'augmentation du nombre de machines dans un parc machine a complexifié sa gestion et la detection des anomalie de fonctionnement</p>
-            <li class="project-info" ><h4>Compétences aqcuises</h4></li>
-          <p>HTML, CSS, PHP,SQL</p>
-        </ul>
-      </li>
-    </ul>
 
     <a href="cvForm.php"><b>Ajouter un projet +</b></a>
 
