@@ -1,11 +1,14 @@
 body {
-  background-image: url(./img/header22.jpg);
+  /*background-image: url(./img/header22.jpg);*/
 }
 legend {
   background-color: rgb(44, 63, 97);
   color: aliceblue;
   padding: 3px 3px;
   border-radius: 5px;
+}
+label {
+  font-size: large;
 }
 
 fieldset {
@@ -16,11 +19,29 @@ fieldset {
   border-color: #26c4ec;
 }
 
-label,
-textarea {
-  margin-left: 15%;
+form {
+  text-align: center;
 }
 
-#projectSkillsField {
-  margin-left: 15%;
+#btnAjouterProjetForm {
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#btnAjouterProjetForm:hover {
+  height: 40px;
+  width: 200px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #26c4ec;
+}
+
+#finiLeLabel {
+  margin-left: 80px;
 }
