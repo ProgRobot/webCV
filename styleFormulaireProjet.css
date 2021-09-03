@@ -1,0 +1,26 @@
+body {
+  background-image: url(./img/header22.jpg);
+}
+legend {
+  background-color: rgb(44, 63, 97);
+  color: aliceblue;
+  padding: 3px 3px;
+  border-radius: 5px;
+}
+
+fieldset {
+  background-color: rgba(78, 103, 114, 0.808);
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #26c4ec;
+}
+
+label,
+textarea {
+  margin-left: 15%;
+}
+
+#projectSkillsField {
+  margin-left: 15%;
+}
